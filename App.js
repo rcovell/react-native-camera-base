@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import { RNCamera } from 'react-native-camera';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -28,7 +29,7 @@ export default class App extends Component<Props> {
           Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit App.js.
+          To get started, edit App.js
         </Text>
         <Text style={styles.instructions}>
           {instructions}
