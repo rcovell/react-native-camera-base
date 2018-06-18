@@ -26,22 +26,34 @@ allprojects {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
         }
-        //maven { url "https://jitpack.io" }
-        //maven { url "https://maven.google.com" }
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
         google()
     }
 }
 
-//subprojects {
-//    afterEvaluate {project ->
-//        if (project.hasProperty("android")) {
-//            android {
-//                    compileSdkVersion 26
-//                    buildToolsVersion '26.0.2'
-//                    buildTypes {
-//                    releaseStaging {}
-//                }
-//            }
-//        }
-//    }
-//}
+/**
+* Project-wide gradle configuration properties for use by all modules
+*/
+ext {
+  compileSdkVersion           = 26
+  targetSdkVersion            = 26
+  buildToolsVersion           = "26.0.2"
+  googlePlayServicesVersion   = "12.0.1"
+  supportLibVersion           = "27.1.0"
+}
+/*
+subprojects {
+    afterEvaluate {project ->
+        if (project.hasProperty("android")) {
+            android {
+                    compileSdkVersion 26
+                    buildToolsVersion '26.0.2'
+                    buildTypes {
+                    releaseStaging {}
+                }
+            }
+        }
+    }
+}
+*/
